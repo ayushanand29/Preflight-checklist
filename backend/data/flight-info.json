@@ -1,0 +1,32 @@
+﻿[
+  {
+    "flightNumber": "AA1234",
+    "date": "2025-11-17",
+    "filedBy": "John Smith",
+    "filingTime": "08:30",
+    "departureLocation": "JFK",
+    "departureTime": "10:15",
+    "arrivalLocation": "LAX",
+    "arrivalTime": "13:45"
+  },
+  {
+    "flightNumber": "UA5678",
+    "date": "2025-11-17",
+    "filedBy": "Sarah Johnson",
+    "filingTime": "07:45",
+    "departureLocation": "ORD",
+    "departureTime": "09:30",
+    "arrivalLocation": "SFO",
+    "arrivalTime": "11:50"
+  },
+  {
+    "flightNumber": "DL9012",
+    "date": "2025-11-17",
+    "filedBy": "Mike Davis",
+    "filingTime": "09:00",
+    "departureLocation": "ATL",
+    "departureTime": "11:20",
+    "arrivalLocation": "MIA",
+    "arrivalTime": "13:15"
+  }
+]

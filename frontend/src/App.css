@@ -1,0 +1,119 @@
+html, body {
+  min-height: 100%;
+  height: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: white !important;
+  font-family: Arial, sans-serif;
+}
+/* Reduce vertical padding globally */
+* {
+  line-height: 1.1;
+}
+
+
+.container {
+  width: 90%;         /* replace scale with width */
+  max-width: 1200px;
+  margin: 40px auto;  /* proper centering and spacing */
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.react-datepicker-wrapper {
+  width: auto !important;
+}
+
+.react-datepicker {
+  font-size: 14px !important;
+}
+
+.react-datepicker__day {
+  width: 2rem !important;
+  line-height: 2rem !important;
+}
+
+
+/* FIX TABLE COLUMN WIDTHS */
+.info-table td:first-child { width: 200px; }
+.info-table td:nth-child(2) { width: 180px; }
+.info-table td:nth-child(3) { width: 200px; }
+.info-table td:nth-child(4) { width: 180px; }
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 35px;
+}
+
+.info-table td {
+  border: 2px solid black;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.top-input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #888;
+  background: white !important;
+  color: black !important;
+}
+
+/* PREFLIGHT CHECKS SECTION */
+.subheading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* CHECKLIST TABLE */
+.checklist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checklist-table th,
+.checklist-table td {
+  border: 2px solid black;
+  padding: 12px;
+}
+
+.checklist-table th {
+  text-align: center;
+  background: #e6e6e6;
+}
+
+/* ROW INPUT */
+.row-input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #777;
+  background: white !important;
+  color: black !important;
+}
+
+/* BUTTONS */
+button {
+  background: black;
+  color: white !important;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
