@@ -43,8 +43,8 @@ function App() {
 
 useEffect(() => {
   Promise.all([
-    //axios.get("http://localhost:5000/api/checklist"),
-    //axios.get("http://localhost:5000/api/flight-info")
+    //axios.get("https://preflight-checklist-l2t5.onrender.com/api/checklist"),
+    //axios.get("https://preflight-checklist-l2t5.onrender.com/api/flight-info")
   ]).then(([checklistRes, flightInfoRes]) => {
     const requiredItems = defaultChecks.map((txt, index) => ({
       id: index + 1,
@@ -74,7 +74,7 @@ function saveEntireForm() {
   };
 
   axios
-    .post("http://localhost:5000/api/save-all", payload)
+    .post("https://preflight-checklist-l2t5.onrender.com/api/save-all", payload)
     .then((res) => {
       alert("Flight info and checklist saved successfully!");
     })
@@ -90,7 +90,7 @@ function saveEntireForm() {
   // Persist the full flight info to backend (manual Save button)
   function saveAllFlightInfo() {
     axios
-      .put("http://localhost:5000/api/flight-info", flightInfo)
+      .put("https://preflight-checklist-l2t5.onrender.com/api/flight-info", flightInfo)
       .then((res) => {
         // If server returns saved object, use it; otherwise keep local state
         if (res.data) setFlightInfo(res.data);
@@ -140,7 +140,7 @@ function saveEntireForm() {
 
   // --- 1️⃣ Fetch flight info ---
   axios
-    .get(`http://localhost:5000/api/flight-info?flightNumber=${encodeURIComponent(val)}`)
+    .get(`https://preflight-checklist-l2t5.onrender.com/api/flight-info?flightNumber=${encodeURIComponent(val)}`)
     .then((res) => {
       const apiData = Array.isArray(res.data) ? res.data[0] : res.data;
 
@@ -186,7 +186,7 @@ function saveEntireForm() {
 
       // --- 2️⃣ Fetch checklist for the same flight ---
       axios
-        .get(`http://localhost:5000/api/checklist?flightNumber=${encodeURIComponent(val)}`)
+        .get(`https://preflight-checklist-l2t5.onrender.com/api/checklist?flightNumber=${encodeURIComponent(val)}`)
         .then((chkRes) => {
           const checklistRows = chkRes.data;
 
@@ -468,7 +468,7 @@ function saveEntireForm() {
 
       axios
         .delete(
-          `http://localhost:5000/api/delete-flight?flightNumber=${flightInfo.flightNumber}`
+          `https://preflight-checklist-l2t5.onrender.com/api/delete-flight?flightNumber=${flightInfo.flightNumber}`
         )
         .then(() => {
           alert("Deleted successfully");
